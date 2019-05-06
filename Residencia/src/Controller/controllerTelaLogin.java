@@ -26,6 +26,8 @@ public class controllerTelaLogin implements ActionListener {
 		telalogin.getSairButton().addActionListener(this);
 		telalogin.getEntrarButton().addActionListener(this);
 		telaprincipal.getMenuMrdCadastrarMorador().addActionListener(this);
+		telacadastromorador.getButtonConfirmar().addActionListener(this);
+		telacadastromorador.getButtonCancelar().addActionListener(this);
 	}
 
 	@Override
@@ -43,8 +45,18 @@ public class controllerTelaLogin implements ActionListener {
 		}
 		
 		if(e.getSource() == telaprincipal.getMenuMrdCadastrarMorador()){
-			telacadastromorador.setVisible(true);
+			telacadastromorador.setVisible(true);			
 		}
+		
+		if(e.getSource() == telacadastromorador.getButtonConfirmar()){
+			sindico.sindicoAdicionarMorador(telacadastromorador.getFieldMorador().getText(), telacadastromorador.getFieldRg().getText(),
+					telacadastromorador.getFieldCpf().getText(), telacadastromorador.getFieldTelefone().getText());
+			
+		}
+		if (e.getSource() == telacadastromorador.getButtonCancelar()) {
+			telacadastromorador.dispose();
+		}
+		
 		
 	}
 		

@@ -79,6 +79,30 @@ public class viewCadastroMorador extends JFrame{
 		
 	}	
 	
+	public JTextField getFieldMorador() {
+		return fieldMorador;
+	}
+
+	public JTextField getFieldRg() {
+		return fieldRg;
+	}
+
+	public JTextField getFieldCpf() {
+		return fieldCpf;
+	}
+
+	public JTextField getFieldTelefone() {
+		return fieldTelefone;
+	}
+
+	public JButton getButtonConfirmar() {
+		return buttonConfirmar;
+	}
+
+	public JButton getButtonCancelar() {
+		return buttonCancelar;
+	}
+
 	public void gridBagLayout(int numero,int espaco){
 		if(NOVA_LINHA == numero){
 			gbc.gridy ++;

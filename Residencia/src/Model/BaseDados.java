@@ -15,8 +15,13 @@ public class BaseDados {
 	
 	public static Moradores buscarMorador(Moradores morador){
 		if(morador != null){
-			moradores.contains(morador);
-			return morador;
+			boolean verificar = moradores.contains(morador);
+			if(verificar == true) {
+				return morador;
+			}
+			else {
+				return null;
+			}
 		}
 		return null;
 	}
@@ -34,5 +39,14 @@ public class BaseDados {
 		
 		return false;
 	}
+	
+	public static boolean atualizarMorador(Moradores moradorAtual, Moradores moradorNovo) {
+		if(buscarMorador(moradorAtual) == moradorAtual) {
+			moradorAtual = moradorNovo;
+		}
+		return false;
+	}
+	
+	
 	
 }

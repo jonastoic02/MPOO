@@ -6,6 +6,17 @@ public class Sindico {
 	
 	public void sindicoAdicionarMorador(String nome, String rg, String cpf, String Telefone){
 		BaseDados.adicionarMorador(new Moradores(nome,rg,cpf,Telefone));
+	
+	}
+	
+	public void sindicoBuscarMorador(Moradores morador) {
+		BaseDados.buscarMorador(morador);
+	}
+	public void sindicoRemovorMorador() {
+		
+	}
+	public void sindicoAlterarMorador() {
+		
 	}
 	
 	public String getLogin() {
